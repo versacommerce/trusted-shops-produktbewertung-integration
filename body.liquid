@@ -1,0 +1,52 @@
+{% if template contains 'product' %}
+  <script type="text/javascript">
+  _tsProductReviewsConfig = {
+  tsid: '{{ integration['tsid'] }}',
+  sku: ['{{ product.code }}'],
+  'element': '#vc_trusted_stars',
+  variant: 'productreviews',
+        /* optional */
+  borderColor: '{{ integration['borderColor'] }}',
+  backgroundColor: '{{ integration['backgroundColor'] }}',
+  locale: 'de_DE',
+  starColor: '{{ integration['starColor'] }}',
+  commentBorderColor: '{{ integration['commentBorderColor'] }}',
+  commentHideArrow: '{{ integration['commentHideArrow'] }}',
+  richSnippets: 'on',
+  starSize: '{{ integration['starSize'] }}',
+  ratingSummary: '{{ integration['ratingSummary'] }}',
+  maxHeight: '1200px',
+  hideEmptySticker: '{{ integration['hideEmptySticker'] }}',
+  filter: 'true',
+  introtext: '{{ integration['introtext'] }}'
+
+  };
+  var scripts = document.getElementsByTagName('SCRIPT'),
+  me = scripts[scripts.length - 1];
+  var _ts = document.createElement('SCRIPT');
+  _ts.type = 'text/javascript';
+  _ts.async = true;
+  _ts.charset = 'utf-8';
+  _ts.src ='//widgets.trustedshops.com/reviews/tsSticker/tsProductSticker.js';
+  me.parentNode.insertBefore(_ts, me);
+  _tsProductReviewsConfig.script = _ts;
+</script>
+<script type="text/javascript" src="//widgets.trustedshops.com/reviews/tsSticker/tsProductStickerSummary.js"></script>
+<script>
+  var summaryBadge = new productStickerSummary();
+  summaryBadge.showSummary(
+  {
+  'tsId': '{{ integration['tsid'] }}',
+  'sku': ['{{ product.code }}'],
+  'element': '#vc_trusted_stars',
+  'starColor' : '{{ integration['starColor'] }}',
+  'starSize' : '{{ integration['starSize'] }}',
+  'fontSize' : '{{ integration['fontSize'] }}',
+  'showRating' : '{{ integration['showRating'] }}' ,
+  'scrollToReviews' : '{{ integration['scrollToReviews'] }}' ,
+  'enablePlaceholder' : '{{ integration['enablePlaceholder'] }}',
+  }
+  );
+
+</script>
+{% endif %}
