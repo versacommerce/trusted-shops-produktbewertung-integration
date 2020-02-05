@@ -1,8 +1,6 @@
 [<img src="versacommerce.png" width="250px" align="right" alt="VersaCommerce.de">](https://www.versacommerce.de/?utm_source=github)
 [<img src="trustedshops.png" width="90px" align="right" alt="business.trustedshops.de">](https://business.trustedshops.de/?utm_source=www.versacommerce.de)
 
-[VersaCommerce] [integration] [javascript] [TrustedShopsProduktbewertung]
-
 # Trusted Shops Produktbewertung Integration for VersaCommerce
 
 ## Trusted Shops Produktbewertung
